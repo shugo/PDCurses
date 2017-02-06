@@ -415,7 +415,8 @@ static int _process_key_event(void)
        check for this first. */
 
     if (key && ( !(state & LEFT_ALT_PRESSED) ||
-        (state & RIGHT_ALT_PRESSED) ))
+        (state & RIGHT_ALT_PRESSED) ||
+	SP->save_key_modifiers ))
     {
         /* This code should catch all keys returning a printable
            character. Characters above 0x7F should be returned as
